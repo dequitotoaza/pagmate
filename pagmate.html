@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>💖 MATRICES NIVEL SUPREMO 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+ margin:0;
+ font-family:'Poppins',sans-serif;
+ background:linear-gradient(270deg,#ff9a9e,#fad0c4,#fbc2eb);
+ background-size:600% 600%;
+ animation:bg 10s ease infinite;
+}
+
+@keyframes bg{
+ 0%{background-position:0%}
+ 50%{background-position:100%}
+ 100%{background-position:0%}
+}
+
+.hero{
+ height:100vh;
+ display:flex;
+ flex-direction:column;
+ justify-content:center;
+ align-items:center;
+ color:white;
+ text-align:center;
+}
+
+.hero h1{font-size:4em}
+
+.nav{
+ display:flex;
+ justify-content:center;
+ flex-wrap:wrap;
+ gap:10px;
+ margin:20px;
+}
+
+.nav button{
+ padding:12px;
+ border:none;
+ border-radius:12px;
+ background:#ff4d88;
+ color:white;
+ cursor:pointer;
+}
+
+.section{
+ display:none;
+ max-width:1100px;
+ margin:auto;
+ background:white;
+ padding:30px;
+ border-radius:20px;
+ box-shadow:0 15px 40px rgba(0,0,0,0.2);
+ margin-bottom:30px;
+ animation:fade 0.5s ease;
+}
+
+.active{display:block}
+
+@keyframes fade{
+ from{opacity:0; transform:translateY(20px)}
+ to{opacity:1; transform:translateY(0)}
+}
+
+input{
+ width:50px;
+ padding:8px;
+ margin:5px;
+ text-align:center;
+}
+
+.resultado{
+ background:#ffe3ee;
+ padding:10px;
+ border-radius:10px;
+ margin-top:10px;
+}
+
+.corazon{
+ position:fixed;
+ animation:float 6s linear infinite;
+}
+
+@keyframes float{
+ 0%{transform:translateY(100vh)}
+ 100%{transform:translateY(-10vh);opacity:0}
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+<h1>💖 MATRICES Y SUS APLICACIONES 💖</h1>
+<p>Brithany Torres – 1ro Contabilidad</p>
+</div>
+
+<div class="nav">
+<button onclick="show('uno')">Matrices</button>
+<button onclick="show('dos')">Tipos</button>
+<button onclick="show('tres')">Multiplicación</button>
+<button onclick="show('cuatro')">Suma y Resta</button>
+<button onclick="show('cinco')">Calculadora</button>
+</div>
+
+<!-- SECCIÓN 1 -->
+<div id="uno" class="section active">
+<h2>📊 ¿QUÉ SON LAS MATRICES?</h2>
+
+<p>Una matriz es un arreglo de números organizado en filas y columnas.</p>
+<p>Se utilizan para ordenar, representar y trabajar información de forma estructurada, especialmente cuando hay muchos datos.</p>
+
+<p>👉 Cada número dentro de la matriz se llama elemento</p>
+<p>👉 La posición depende de su fila y columna</p>
+
+<h3>🧠 ¿PARA QUÉ SIRVEN?</h3>
+<ul>
+<li>Organizar información numérica</li>
+<li>Resolver problemas matemáticos</li>
+<li>Representar sistemas complejos</li>
+<li>Hacer cálculos rápidos</li>
+</ul>
+
+<h3>📌 APLICACIONES</h3>
+<ul>
+<li>Matemáticas</li>
+<li>Programación</li>
+<li>Economía</li>
+<li>Ingeniería</li>
+<li>Vida cotidiana</li>
+</ul>
+
+<p>💡 Son herramientas reales para resolver problemas.</p>
+</div>
+
+<!-- SECCIÓN 2 -->
+<div id="dos" class="section">
+<h2>📊 TIPOS DE MATRICES</h2>
+
+<p><b>Matriz fila:</b> Una matriz fila es aquella que está formada por una sola fila y varias columnas, lo que significa que su estructura es horizontal 📏. Se utiliza principalmente para representar datos organizados en una sola línea, como listas de valores o registros simples. En el álgebra lineal, se considera un tipo de vector horizontal ➡️ y puede participar en operaciones con otras matrices, especialmente con matrices columna. Es muy útil en cálculos donde se necesita simplificar información o trabajar con datos ordenados de forma rápida y directa.</p>
+<p><b>Matriz columna:</b> Una matriz columna está compuesta por una sola columna y varias filas, por lo que su forma es vertical 📊. Se utiliza ampliamente para representar vectores en matemáticas, física y programación. Este tipo de matriz permite organizar datos de manera ordenada hacia abajo ⬇️, facilitando su uso en sistemas de ecuaciones y transformaciones matemáticas. Es muy importante en aplicaciones donde se manejan magnitudes como fuerza, velocidad o dirección. Además, es fundamental en operaciones de multiplicación de matrices y en modelos matemáticos más avanzados.</p>
+<p><b>Matriz nula:</b> La matriz nula es aquella en la que todos sus elementos son iguales a cero ⚫. No importa su tamaño, ya que puede tener cualquier número de filas y columnas. Su principal función es representar la ausencia total de valores o información. En operaciones matemáticas, actúa como el elemento neutro en la suma ➕, lo que significa que al sumarla con otra matriz no cambia el resultado. También tiene la propiedad de que al multiplicarla por cualquier matriz, el resultado será otra matriz nula. Es esencial para entender conceptos básicos en álgebra lineal.</p>
+<p><b>Matriz cuadrada:</b> Una matriz cuadrada es aquella que tiene el mismo número de filas y columnas, formando una estructura simétrica 📐. Este tipo de matriz es uno de los más importantes en matemáticas, ya que permite realizar operaciones avanzadas como el cálculo del determinante, la matriz inversa y el análisis de sistemas de ecuaciones. Además, puede presentar diferentes propiedades como ser diagonal, simétrica o triangular 🔺. Se utiliza en múltiples áreas como ingeniería, economía y programación, siendo clave para resolver problemas complejos y modelar situaciones reales de manera eficiente.</p>
+
+<p>Se usan en matemáticas, programación e ingeniería.</p>
+</div>
+
+<!-- SECCIÓN 3 -->
+<div id="tres" class="section">
+<h2>📊 MULTIPLICACIÓN DE MATRICES</h2>
+
+<p>👉 Filas por columnas</p>
+<p>Condición: columnas A = filas B</p>
+
+<ul>
+<li>Tomar fila</li>
+<li>Tomar columna</li>
+<li>Multiplicar</li>
+<li>Sumar</li>
+</ul>
+
+<p>Resultado: nueva matriz</p>
+
+<p><b>Errores:</b></p>
+<ul>
+<li>No revisar dimensiones</li>
+<li>Multiplicar número a número</li>
+<li>Confundir orden</li>
+</ul>
+</div>
+
+<!-- SECCIÓN 4 -->
+<div id="cuatro" class="section">
+<h2>📊 SUMA Y RESTA DE MATRICES</h2>
+
+<p>Elemento por elemento</p>
+<p>Mismo tamaño obligatorio</p>
+
+<p><b>Suma:</b> conmutativa</p>
+<p><b>Resta:</b> no conmutativa</p>
+
+<ul>
+<li>No alinear números</li>
+<li>Diferente tamaño</li>
+</ul>
+</div>
+
+<!-- SECCIÓN 5 -->
+<div id="cinco" class="section">
+<h2>🧠 CALCULADORA PRO</h2>
+
+<h3>Matriz A</h3>
+<input id="a1"><input id="a2"><br>
+<input id="a3"><input id="a4">
+
+<h3>Matriz B</h3>
+<input id="b1"><input id="b2"><br>
+<input id="b3"><input id="b4">
+
+<br><br>
+
+<button onclick="sumar()">Sumar</button>
+<button onclick="restar()">Restar</button>
+<button onclick="multiplicar()">Multiplicar</button>
+
+<div id="resultado" class="resultado"></div>
+</div>
+
+<script>
+function show(id){
+ document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+}
+
+function getVals(){
+ let ids=['a1','a2','a3','a4','b1','b2','b3','b4'];
+ let v=ids.map(id=>parseFloat(document.getElementById(id).value));
+ return v.includes(NaN)?null:v;
+}
+
+function sumar(){
+ let v=getVals();
+ if(!v){resultado.innerHTML='⚠️ Llena todo'; return;}
+ resultado.innerHTML=`Resultado: [${v[0]+v[4]}, ${v[1]+v[5]}; ${v[2]+v[6]}, ${v[3]+v[7]}]`;
+}
+
+function restar(){
+ let v=getVals();
+ if(!v){resultado.innerHTML='⚠️ Llena todo'; return;}
+ resultado.innerHTML=`Resultado: [${v[0]-v[4]}, ${v[1]-v[5]}; ${v[2]-v[6]}, ${v[3]-v[7]}]`;
+}
+
+function multiplicar(){
+ let v=getVals();
+ if(!v){resultado.innerHTML='⚠️ Llena todo'; return;}
+
+ let r1=v[0]*v[4]+v[1]*v[6];
+ let r2=v[0]*v[5]+v[1]*v[7];
+ let r3=v[2]*v[4]+v[3]*v[6];
+ let r4=v[2]*v[5]+v[3]*v[7];
+
+ resultado.innerHTML=`Resultado: [${r1}, ${r2}; ${r3}, ${r4}]`;
+}
+
+setInterval(()=>{
+ let h=document.createElement("div");
+ h.className="corazon";
+ h.style.left=Math.random()*100+"vw";
+ h.innerHTML="💖";
+ document.body.appendChild(h);
+ setTimeout(()=>h.remove(),6000);
+},400);
+</script>
+
+</body>
+</html>
